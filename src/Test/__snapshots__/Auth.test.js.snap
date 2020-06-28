@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the AuthForm matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="AuthForm"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row row-container"
+      >
+        <div
+          class="overlay-container move"
+        >
+          <div
+            class="overlay"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-sm-6"
+              >
+                <div
+                  class="right move-down"
+                >
+                  <h1>
+                    Welcome Back!
+                  </h1>
+                  <p>
+                    Stay connected and login with your personal info
+                  </p>
+                  <button
+                    class="ghost"
+                    id="signIn"
+                  >
+                    Sign In
+                  </button>
+                </div>
+              </div>
+              <div
+                class="col-sm-6"
+              >
+                <div
+                  class="left"
+                >
+                  <h1>
+                    Hello, Friend!
+                  </h1>
+                  <p>
+                    Enter your personal details and start journey with us
+                  </p>
+                  <button
+                    class="ghost"
+                    id="signUp"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-6 form-container sign-up-container move-left"
+        >
+          <form>
+            <h1>
+              Create Account
+            </h1>
+            <div
+              class="social-container"
+            >
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-facebook-f"
+                />
+              </p>
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-google-plus-g"
+                />
+              </p>
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-linkedin-in"
+                />
+              </p>
+            </div>
+            <span>
+              or use your email for registration
+            </span>
+            <input
+              class="form-control"
+              name="email"
+              placeholder="Email"
+              type="email"
+              value=""
+            />
+            <input
+              class="form-control"
+              name="username"
+              placeholder="Username"
+              type="text"
+              value=""
+            />
+            <input
+              class="form-control"
+              name="password"
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+            <button>
+              Sign Up
+            </button>
+          </form>
+        </div>
+        <div
+          class="col-sm-6 form-container sign-in-container move-right"
+        >
+          <form>
+            <h1>
+              Sign in
+            </h1>
+            <div
+              class="social-container"
+            >
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-facebook-f"
+                />
+              </p>
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-google-plus-g"
+                />
+              </p>
+              <p
+                class="social"
+              >
+                <i
+                  class="fab fa-linkedin-in"
+                />
+              </p>
+            </div>
+            <span>
+              or use your account
+            </span>
+            <input
+              class="form-control"
+              name="username"
+              placeholder="Username"
+              type="username"
+              value=""
+            />
+            <input
+              class="form-control"
+              name="password"
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+            <p>
+              Forgot your password?
+            </p>
+            <button>
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

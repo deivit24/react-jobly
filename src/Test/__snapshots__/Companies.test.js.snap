@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Companies and Company Details matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="container mt-5"
+  >
+    <h3
+      class="mt-5 mb-3 text-center"
+    >
+      Search for Companies 
+    </h3>
+    <div
+      class="Search mb-4"
+    >
+      <form
+        class="form-inline"
+      >
+        <input
+          class="form-control form-control-lg flex-grow-1"
+          name="search"
+          placeholder="Enter search term.."
+          value=""
+        />
+        <button
+          class="btn btn-lg btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div
+      class="row mt-5"
+    >
+      <p>
+        Sorry no results
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Testing Companies and Company Details matches snapshot 2`] = `
+<DocumentFragment>
+  <div>
+    Loading...
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="container mt-5"
+  >
+    <h3
+      class="mt-5 mb-3 text-center"
+    >
+      Search for Companies 
+    </h3>
+    <div
+      class="Search mb-4"
+    >
+      <form
+        class="form-inline"
+      >
+        <input
+          class="form-control form-control-lg flex-grow-1"
+          name="search"
+          placeholder="Enter search term.."
+          value=""
+        />
+        <button
+          class="btn btn-lg btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div
+      class="row mt-5"
+    >
+      <p>
+        Sorry no results
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;

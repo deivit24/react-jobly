@@ -1,0 +1,290 @@
+.AuthForm {
+  background: #fef3e2;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+.AuthForm .row-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  min-height: 480px;
+  transition: transform 1s ease-in-out;
+}
+.AuthForm .row-container .overlay-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+  z-index: 100;
+  transform: translateX(50%);
+}
+.AuthForm .row-container .overlay-container .overlay {
+  background: #f7b733;
+  background: -webkit-linear-gradient(to right, #212aa5, #7b9ff2);
+  background: linear-gradient(to right, #212aa5, #7b9ff2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.AuthForm .row-container .overlay-container .overlay .row {
+  position: relative;
+  height: 100%;
+}
+.AuthForm .row-container .overlay-container .overlay .row .col-sm-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.AuthForm .row-container .move {
+  transform: translateX(-50%);
+}
+.AuthForm .row-container .form-container {
+  transition: all 1s ease-in-out;
+}
+.AuthForm .row-container .form-container form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+.AuthForm .row-container .form-container form .social-container {
+  margin: 20px 0;
+}
+.AuthForm .row-container .form-container form .social-container p {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+.AuthForm .row-container .sign-in-container {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.AuthForm .row-container .sign-up-container {
+  transition: all 1s ease-in-out;
+}
+.AuthForm .row-container .move-left {
+  transform: translateX(50%);
+  opacity: 0;
+}
+.AuthForm .row-container .move-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+.AuthForm .row-container h1 {
+  font-weight: bold;
+  margin: 0;
+}
+.AuthForm .row-container p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+.AuthForm .row-container span {
+  font-size: 12px;
+}
+.AuthForm .row-container a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+.AuthForm .row-container button {
+  border-radius: 20px;
+  border: 1px solid #212aa5;
+  background-color: #212aa5;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+.AuthForm .row-container button:active {
+  transform: scale(0.95);
+}
+.AuthForm .row-container button:focus {
+  outline: none;
+}
+.AuthForm .row-container button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.AuthForm .row-container input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .AuthForm .row-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 320px;
+    min-height: 600px;
+    transition: transform 1s ease-in-out;
+  }
+  .AuthForm .row-container .overlay-container {
+    transform: translateY(50%);
+  }
+  .AuthForm .row-container .overlay-container .overlay {
+    background: #7b9ff2;
+    background: -webkit-linear-gradient(#212aa5, #7b9ff2);
+    background: linear-gradient(#212aa5, #7b9ff2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  .AuthForm .row-container .overlay-container .overlay .row {
+    position: relative;
+    height: 100%;
+  }
+  .AuthForm .row-container .overlay-container .overlay .row .col-sm-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .AuthForm .row-container .overlay-container .overlay .row .right {
+    transition: all 0.5s ease-in-out;
+  }
+  .AuthForm .row-container .move {
+    transform: translateY(-50%);
+  }
+  .AuthForm .row-container .form-container {
+    transition: all 1s ease-in-out;
+  }
+  .AuthForm .row-container .form-container form {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    height: 100%;
+    text-align: center;
+  }
+  .AuthForm .row-container .form-container form .social-container {
+    margin: 20px 0;
+  }
+  .AuthForm .row-container .form-container form .social-container p {
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 20px;
+    width: 20px;
+  }
+  .AuthForm .row-container .sign-in-container {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  .AuthForm .row-container .sign-up-container {
+    transition: all 1s ease-in-out;
+  }
+  .AuthForm .row-container .move-left {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  .AuthForm .row-container .move-right {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .AuthForm .row-container .move-down {
+    opacity: 0;
+  }
+  .AuthForm h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .AuthForm p {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    margin: 10px 0 15px;
+  }
+  .AuthForm span {
+    font-size: 10px;
+  }
+  .AuthForm a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  .AuthForm button {
+    border-radius: 20px;
+    border: 1px solid #212aa5;
+    background-color: #212aa5;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  .AuthForm button:active {
+    transform: scale(0.95);
+  }
+  .AuthForm button:focus {
+    outline: none;
+  }
+  .AuthForm button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  .AuthForm input {
+    font-size: 12px;
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  }
+}

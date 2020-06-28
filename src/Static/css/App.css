@@ -1,0 +1,20 @@
+.App {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.Dark {
+  background-color: #282c34;
+  color: white;
+}
+
+.use-message-success {
+  background: lightgreen;
+  color: green;
+  font-weight: bold;
+}
+
+.use-message-danger {
+  background: lightcoral;
+  color: red;
+  font-weight: bold;
+}

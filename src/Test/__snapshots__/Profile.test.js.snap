@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Profile component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="row mt-5"
+    >
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="card"
+        >
+          <img
+            alt="Card image cap"
+            class="card-img-top"
+            src=""
+            width="100%"
+          />
+          <div
+            class="card-body"
+          >
+            <div
+              class="font-weight-bold text-center card-title"
+            >
+              test mctest
+              <br />
+              <small
+                class="text=muted"
+              >
+                @test
+              </small>
+            </div>
+            <p
+              class="card-text"
+            >
+              test@test.net
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-8"
+      >
+        <form>
+          <div
+            class="form-group"
+          >
+            <label>
+              First Name
+            </label>
+            <input
+              class="form-control"
+              name="first_name"
+              value="test"
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label>
+              Last Name
+            </label>
+            <input
+              class="form-control"
+              name="last_name"
+              value="mctest"
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label>
+              Email
+            </label>
+            <input
+              class="form-control"
+              name="email"
+              value="test@test.net"
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label>
+              Photo URL
+            </label>
+            <input
+              class="form-control"
+              name="photo_url"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label>
+              Confirm password to make changes:
+            </label>
+            <input
+              class="form-control"
+              name="password"
+              type="password"
+              value=""
+            />
+          </div>
+          <button
+            class="btn btn-primary btn-block mt-4"
+          >
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Company Card matches snapshot for company 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <img
+      alt="Card image cap"
+      class="card-img-top"
+      src="https://pbs.twimg.com/profile_images/770491761412173826/ZUeIa4tw_400x400.jpg"
+      width="100%"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="font-weight-bold text-center card-title"
+      >
+        <a
+          href="/companies/rithm"
+        >
+          Rithm School
+        </a>
+      </div>
+      <p
+        class="card-text"
+      >
+        Become an exceptional developer in 16 weeks.
+      </p>
+      <p
+        class="card-text"
+      >
+        Company Size: 32 
+        <i
+          class="fas fa-users"
+        />
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Testing the JobCard matches snapshot for company 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <img
+      alt="Card image cap"
+      class="card-img-top"
+      src="https://pbs.twimg.com/profile_images/770491761412173826/ZUeIa4tw_400x400.jpg"
+      width="100%"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="font-weight-bold text-center card-title"
+      >
+        <a
+          href="/companies/rithm"
+        >
+          Rithm School
+        </a>
+      </div>
+      <p
+        class="card-text"
+      >
+        Become an exceptional developer in 16 weeks.
+      </p>
+      <p
+        class="card-text"
+      >
+        Company Size: 32 
+        <i
+          class="fas fa-users"
+        />
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Testing the JobCard matches snapshot for job 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="card-body"
+    >
+      <div
+        class="font-weight-bold card-title"
+      >
+        <h4>
+          CEO
+        </h4>
+      </div>
+      <p
+        class="card-text"
+      >
+        Salary $ 1,000,000
+      </p>
+      <p
+        class="card-text"
+      >
+         Equity 1000%
+        <button
+          class="float-right btn btn-info"
+        >
+          Apply
+        </button>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
