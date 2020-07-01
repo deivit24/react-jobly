@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import API from '../../API';
 import Search from '../Search/Search';
 import JobCard from '../Cards/JobCard';
-
+import Loading from '../../Helpers/Loading';
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
 
@@ -26,6 +26,9 @@ const Jobs = () => {
     setJobs((j) =>
       j.map((job) => (job.id === jobId ? { ...job, state: message } : job))
     );
+  }
+  if (jobs.length === 0) {
+    return <Loading type="spin" color="#212aa5" />;
   }
   let none = <p>Sorry no results</p>;
   let found = jobs.map((job, idx) => (

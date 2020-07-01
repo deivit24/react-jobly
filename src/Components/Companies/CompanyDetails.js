@@ -4,6 +4,7 @@ import API from '../../API';
 import CompanyCard from '../Cards/CompanyCard';
 import JobCard from '../Cards/JobCard';
 import UserContext from '../../Helpers/UserContext';
+import Loading from '../../Helpers/Loading';
 
 const CompanyDetails = () => {
   const { handle } = useParams();
@@ -44,7 +45,7 @@ const CompanyDetails = () => {
   }
 
   if (!company) {
-    return <div>Loading...</div>;
+    return <Loading type="spin" color="#212aa5" />;
   }
 
   return (
