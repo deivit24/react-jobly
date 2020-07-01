@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import API from './API';
 import './Static/css/App.css';
 import UserContext from './Helpers/UserContext';
+import Loading from './Helpers/Loading';
 export const TOKEN_STORAGE_ID = 'jobly-token';
 
 const App = () => {
@@ -34,7 +35,7 @@ const App = () => {
     setToken(null);
   };
   if (!infoLoaded) {
-    return <p>Loading...</p>;
+    return <Loading type="spin" color="#212aa5" />;
   }
   return (
     <UserContext.Provider value={{ currentUser, setCurrentUser }}>
