@@ -1,68 +1,116 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Jobly
 
-## Available Scripts
+This is a project using React to create the front end for the Jobly API.
 
-In the project directory, you can run:
+[Click here to see the project on Netlify](https://dreamy-austin-f3aff9.netlify.app/)
 
-### `npm start`
+## Step Zero: Setup
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Download the starter code. Note: this is the backend. You’ll start the front end yourself.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Create a database, **jobly**, and use the seed data provided. You can run the seed file using psql jobly < data.sql
 
-### `npm test`
+- Create a new React project.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* It may help to take a few minutes to look over the backend to remind yourself of the most important routes.
 
-### `npm run build`
+* Start up the backend. We have it starting on port 3001, so you can run the React front end on 3000.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Step One: Design Component Hierarchy
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+It will help you first get a sense of how this app should work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We have a demo running at https://jobly-app.herokuapp.com/. Take a tour and note the features.
 
-### `npm run eject`
+You can register as a new user and explore the site or log in as our test user, “rithmtest” (password: “rithmtest”).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### =STOP=
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A big skill in learning React is to learn to design component hierarchies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Take time to diagram what components you think you’ll need in this application, and what the most important parts of state are, and where they might live.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Notice how some things are common: the appearance of a job on the company detail page is the same as on the jobs page. You should be able to re-use that component.
 
-## Learn More
+**Spend time here**. This may be one of the most important parts of this exercise. We suggest you show your proposed design with an instructor, to get feedback before proceeding.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Step Two: Make an API Helper
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Many of the components will need to talk to the backend (the company detail page will need to load data about the company, for example).
 
-### Code Splitting
+It will be messy and hard to debug if these components all had AJAX calls buried inside of them.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Instead, make a single **JoblyAPI** class, which will have helper methods for centralizing this information. This is conceptually similar to having a model class to interact with the database, instead of having SQL scattered all over your routes.
 
-### Analyzing the Bundle Size
+## Step Three: Make Your Routes File
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Look at the working demo to see the routes you’ll need:
 
-### Making a Progressive Web App
+- **/** - Homepage — just a simple welcome message
+- **/companies** - List all companies
+- **/companies/apple** - View details of this company
+- **/jobs** - List all jobs
+- **/login** - Login/signup form
+- **/profile** - Edit profile page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Make your routes file that allows you to navigate a skeleton of your site. Make simple placeholder components for each of the feature areas.
 
-### Advanced Configuration
+Make a navigation component to be the top-of-window navigation bar, linking to these different sections.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+When you work on authentication later, you need to add more things here. But for now, you should be able to browse around the site and see your placeholder components.
 
-### Deployment
+## Step Four: Companies & Company Detail
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Flesh out your components for showing detail on a company, showing the list of all companies, and showing simple info about a company on the list (we called these **Company**, **Companies**, and **CompanyCard**, respectively—but you might have used different names).
 
-### `npm run build` fails to minify
+Make your companies list have a searchbox, which filters companies to those matching the search (remember: there’s a backend endpoint for this!). Do this filtering in the backend — **not** by loading all companies and filtering in the front end!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Step Five: Jobs
+
+Similarly, flesh out the page that lists all jobs, and the “job card”, which shows info on a single job. You can use this component on both the list-all-jobs page as well as the show-detail-on-a-company page.
+
+Don’t worry about the “apply” button for now — you’ll add that later, when there’s authentication for the app.
+
+## Step Six: Authentication
+
+This step is tricky. Go slowly and test your work carefully.
+
+You need to add the following to your app:
+
+- A route that that lets the user log in. This will use the login endpoint on the server.
+
+      	Rather than keeping this login token in React state, store in your browser’s localStorage. This way, if the user refreshes their page or closes the the browser window, they’ll stay logged in (more on this in the next step).
+
+      	Edit the JoblyApi file to extract the token from localStorage, rather than using that hardcoded “testuser” token.
+
+      	Make your navigation bar only show only the login link if the user isn’t logged in. Make it show a “logout” link when they are, along with the other links.
+
+T
+
+- he registration process is similar to the login process: the fields gathered are different, and the backend endpoint is different, but the process is the same: call the endpoint, get the token, and store in localStorage. In our solution, we used one component for both of these. You can do this, or use two different components.
+
+* Have homepage show a login button if the user isn’t logged in.
+
+- Have the navigation bar show either a login or logout button.
+
+Figure out how logout should work.
+
+## Step Seven: Remembering Login Status
+
+Once you can log in and sign up, a new problem emerges: what happens when you hard refresh the page? You need to make sure the app can recover your login status.
+
+To handle this problem in your top-level **App** component, add a **localStorage** check inside of **useEffect**. If there’s a valid token in **localStorage**, then ping the **API** to get all of the information on the current user and store it in the **App** component’s state. This will let you pass current info down as a prop to any descendant component, too.
+
+Once React knows whether or not there’s a current user, you can start protecting certain views! Next, make sure that on the front-end, you need to be logged in if you want to access the companies page, the jobs page, or a company details page.
+
+As a bonus, you can write a **useLocalStorage** hook to manage the user data in local storage!
+
+## Step Eight: Profile Page
+
+Add a feature where the logged-in user can edit their profile.
+
+## Step Nine: Job Applications
+
+A user should be able to apply for jobs (there’s already a backend endpoint for this!).
+
+On the job info (both on the jobs page, as well as the company detail page), add a button to apply for a job. This should change if this is a job the user has already applied to.
