@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../../Static/css/Search.css';
 const Search = ({ searchFor }) => {
   const [search, setSearch] = useState('');
 

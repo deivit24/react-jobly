@@ -98,7 +98,7 @@
 }
 .AuthForm .row-container h1 {
   font-weight: bold;
-  margin: 0;
+  margin: 15px 0;
 }
 .AuthForm .row-container p {
   font-size: 14px;
@@ -108,7 +108,7 @@
   margin: 20px 0 30px;
 }
 .AuthForm .row-container span {
-  font-size: 12px;
+  display: none;
 }
 .AuthForm .row-container a {
   color: #333;
@@ -141,22 +141,15 @@
 .AuthForm .row-container input {
   background-color: #eee;
   border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
+  padding: 8px 10px;
+  margin: 4px 0;
   width: 100%;
 }
 @media screen and (max-width: 576px) {
   .AuthForm .row-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
+    min-height: 500px;
+    width: 320px;
     margin: 0 auto;
-    max-width: 320px;
-    min-height: 600px;
-    transition: transform 1s ease-in-out;
   }
   .AuthForm .row-container .overlay-container {
     transform: translateY(50%);
@@ -205,17 +198,10 @@
     text-align: center;
   }
   .AuthForm .row-container .form-container form .social-container {
-    margin: 20px 0;
+    display: none;
   }
   .AuthForm .row-container .form-container form .social-container p {
-    border: 1px solid #dddddd;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 20px;
-    width: 20px;
+    display: none;
   }
   .AuthForm .row-container .sign-in-container {
     transition: all 1s ease-in-out;
@@ -239,14 +225,14 @@
   .AuthForm h1 {
     font-weight: bold;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .AuthForm p {
     font-size: 12px;
     font-weight: 100;
     line-height: 15px;
     letter-spacing: 0.5px;
-    margin: 10px 0 15px;
+    margin: 5px 0 10px;
   }
   .AuthForm span {
     font-size: 10px;

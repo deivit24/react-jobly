@@ -1,0 +1,10 @@
+@media screen and (max-width: 576px) {
+  .Search form input {
+    width: 220px;
+    font-size: 15px;
+  }
+  .Search form .btn {
+    width: 100px;
+    font-size: 15px;
+  }
+}
